@@ -577,6 +577,19 @@ typedef enum GAErrorSeverity : NSInteger {
  */
 + (void)setEnabledVerboseLog:(BOOL)flag;
 
+/*!
+ @method
+ 
+ @abstract Enable wanrning logging of analytics.
+ 
+ @param flag
+ Enable or disable watning log mode
+ 
+ @availability Available since 3.2.1
+ 
+ */
++ (void)setEnabledWarningLog:(BOOL)flag;
+
 
 /*!
  @method
@@ -594,6 +607,33 @@ typedef enum GAErrorSeverity : NSInteger {
  */
 + (void)setEnabledManualSessionHandling:(BOOL)flag;
 
+/*!
+ @method
+ 
+ @abstract Enable error reporting.
+ When enabled this will automatic send error events for uncaught exceptions.
+ 
+ @param flag
+ Enable or disable error reporting.
+ 
+ @availability Available since 3.1.0
+ 
+ */
++ (void)setEnabledErrorReporting:(BOOL)flag;
+
+/*!
+ @method
+ 
+ @abstract Enable/disable event submission.
+ When enabled this will allow events to be sent.
+ 
+ @param flag
+ Enable or disable event submission.
+ 
+ @availability Available since 3.2.0
+ 
+ */
++ (void)setEnabledEventSubmission:(BOOL)flag;
 
 /*!
  @method

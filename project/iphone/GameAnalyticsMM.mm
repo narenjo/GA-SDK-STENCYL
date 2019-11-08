@@ -45,6 +45,42 @@ namespace gameanalytics
       }
     }
 
+    void enableWarningLog(const bool enable)
+    {
+      if(enable == true)
+      {
+        [GameAnalytics setEnabledWarningLog:YES];
+      }
+      else
+      {
+        [GameAnalytics setEnabledWarningLog:NO];
+      }
+    }
+
+    void enableErrorReporting(const bool enable)
+    {
+      if(enable == true)
+      {
+        [GameAnalytics setEnabledErrorReporting:YES];
+      }
+      else
+      {
+        [GameAnalytics setEnabledErrorReporting:NO];
+      }
+    }
+
+    void enableEventSubmission(const bool enable)
+    {
+      if(enable == true)
+      {
+        [GameAnalytics setEnabledEventSubmission:YES];
+      }
+      else
+      {
+        [GameAnalytics setEnabledEventSubmission:NO];
+      }
+    }
+
     void configureBuild(const char *build)
     {
       [GameAnalytics configureBuild:[[NSString alloc]
@@ -92,19 +128,19 @@ namespace gameanalytics
       [GameAnalytics configureAvailableCustomDimensions03:dimensionsArray];
     }
 
-    void setCustomDimensions01(const char* _dimension)
+    void setCustomDimension01(const char* _dimension)
     {
       NSString* dimension = [[NSString alloc] initWithUTF8String:_dimension];
       [GameAnalytics setCustomDimension01:dimension];
     }
 
-    void setCustomDimensions02(const char* _dimension)
+    void setCustomDimension02(const char* _dimension)
     {
       NSString* dimension = [[NSString alloc] initWithUTF8String:_dimension];
       [GameAnalytics setCustomDimension02:dimension];
     }
 
-    void setCustomDimensions03(const char* _dimension)
+    void setCustomDimension03(const char* _dimension)
     {
       NSString* dimension = [[NSString alloc] initWithUTF8String:_dimension];
       [GameAnalytics setCustomDimension03:dimension];

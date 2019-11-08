@@ -11,6 +11,9 @@ namespace gameanalytics
     void initializeWithGameKey(const char* title, const char* message);
     void enableVerboseLog(const bool enable);
     void enableInfoLog(const bool enable);
+    void enableWarningLog(const bool enable);
+    void enableErrorReporting(const bool enable);
+    void enableEventSubmission(const bool enable);
     void configureBuild(const char* build);
     void configureUserId(const char* userId);
     void configureAvailableResourceCurrencies(const char* _currencies);
@@ -18,9 +21,9 @@ namespace gameanalytics
     void configureAvailableCustomDimensions01(const char* _dimensions);
     void configureAvailableCustomDimensions02(const char* _dimensions);
     void configureAvailableCustomDimensions03(const char* _dimensions);
-    void setCustomDimensions01(const char* _dimension);
-    void setCustomDimensions02(const char* _dimension);
-    void setCustomDimensions03(const char* _dimension);
+    void setCustomDimension01(const char* _dimension);
+    void setCustomDimension02(const char* _dimension);
+    void setCustomDimension03(const char* _dimension);
     void setGender(const char* gender);
     void setBirthYear(const int birthYear);
 

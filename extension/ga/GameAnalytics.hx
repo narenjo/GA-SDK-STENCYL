@@ -89,9 +89,9 @@ class GameAnalytics {
                 private static var configureAvailableCustomDimensions01GA = Lib.load("gameanalytics","configureAvailableCustomDimensions01GA",1);
                 private static var configureAvailableCustomDimensions02GA = Lib.load("gameanalytics","configureAvailableCustomDimensions02GA",1);
                 private static var configureAvailableCustomDimensions03GA = Lib.load("gameanalytics","configureAvailableCustomDimensions03GA",1);
-                private static var setCustomDimension01GA = Lib.load("gameanalytics","setCustomDimension01",1);
-                private static var setCustomDimension02GA = Lib.load("gameanalytics","setCustomDimension02",1);
-                private static var setCustomDimension03GA = Lib.load("gameanalytics","setCustomDimension03",1);
+                private static var setCustomDimension01GA = Lib.load("gameanalytics","setCustomDimension01GA",1);
+                private static var setCustomDimension02GA = Lib.load("gameanalytics","setCustomDimension02GA",1);
+                private static var setCustomDimension03GA = Lib.load("gameanalytics","setCustomDimension03GA",1);
                 private static var setGenderGA = Lib.load("gameanalytics","setGenderGA",1);
                 private static var setBirthYearGA = Lib.load("gameanalytics","setBirthYearGA",1);
 

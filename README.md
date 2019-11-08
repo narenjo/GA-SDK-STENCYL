@@ -22,7 +22,7 @@ If you have any issues or feedback regarding the SDK, please contact our friendl
 > The SDK build size in a native Android app is only around **49Kb** and the dependecies take up to **820Kb** depending if your app already uses some of the same dependencies.   
 >   
 > **iOS:**   
-> SDK V2.1.0
+> SDK V3.2.1
 > The SDK build size in a native iOS app is only around **242Kb** (armv7) / **259Kb** (armv8).
 >   
 > **JAVASCRIPT:**   

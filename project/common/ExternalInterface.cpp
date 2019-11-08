@@ -39,6 +39,24 @@ void enableInfoGA(value enable)
 }
 DEFINE_PRIM(enableInfoGA,1);
 
+void enableWarningLogGA(value enable)
+{
+	enableWarningLog(val_bool(enable));
+}
+DEFINE_PRIM(enableWarningLogGA,1);
+
+void enableErrorReportingGA(value enable)
+{
+	enableErrorReporting(val_bool(enable));
+}
+DEFINE_PRIM(enableErrorReportingGA,1);
+
+void enableEventSubmissionGA(value enable)
+{
+	enableEventSubmission(val_bool(enable));
+}
+DEFINE_PRIM(enableEventSubmissionGA,1);
+
 void configureUserIdGA(value user_id)
 {
 	configureUserId(val_string(user_id));
@@ -83,19 +101,19 @@ DEFINE_PRIM(configureAvailableCustomDimensions03GA,1);
 
 void setCustomDimension01GA(value dimension)
 {
-	setCustomDimensions01(val_string(dimension));
+	setCustomDimension01(val_string(dimension));
 }
 DEFINE_PRIM(setCustomDimension01GA,1);
 
 void setCustomDimension02GA(value dimension)
 {
-	setCustomDimensions02(val_string(dimension));
+	setCustomDimension02(val_string(dimension));
 }
 DEFINE_PRIM(setCustomDimension02GA,1);
 
 void setCustomDimension03GA(value dimension)
 {
-	setCustomDimensions03(val_string(dimension));
+	setCustomDimension03(val_string(dimension));
 }
 DEFINE_PRIM(setCustomDimension03GA,1);
 
