@@ -24,8 +24,15 @@ import extension.ga.js.GameAnalyticsJS;
 import extension.ga.GADef;
 
 class GameAnalytics {
-  //versioning
-  private static inline var sdk_version:String = "2.1.0"; //GameAnalytics SDK version
+
+  //sdk version
+  private static inline var sdk_version_ios:String = "ios 3.2.1";
+  private static inline var sdk_version_android:String = "android 4.0.0";
+  private static inline var sdk_version_javascript:String = "javascript 3.1.2";
+
+  //extension version
+  private static inline var sdk_name:String = "openfl"; //GameAnalytics SDK name
+  private static inline var sdk_version:String = "3.0.0"; //GameAnalytics SDK version
 
   //Settings cache
   private static var gameKey:String;
@@ -694,15 +701,18 @@ class GameAnalytics {
   // SDK state
   private static function configureSdkVersion()
   {
-    var _version:String = "stencyl " + sdk_version;
+    var _version:String = sdk_name+" " + sdk_version;
     #if(cpp && mobile && !android)
-    configureSdkVersionGA(_version);
+      _version = sdk_version_ios;
+      configureSdkVersionGA(_version);
     #end
     #if android
-    configureSdkVersionGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configureSdkGameEngineVersion", "(Ljava/lang/String;)V", true);
-    configureSdkVersionGA([_version]);
+      _version = sdk_version_android;
+      configureSdkVersionGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configureSdkGameEngineVersion", "(Ljava/lang/String;)V", true);
+      configureSdkVersionGA([_version]);
     #end
     #if(html5)
+      _version = sdk_version_javascript;
       GameAnalyticsJS.GameAnalytics("configureSdkGameEngineVersion", _version);
     #end
   }
@@ -711,15 +721,8 @@ class GameAnalytics {
   {
     var engineVersion:String;
 
-    #if(openfl >= "4.0.0")
-    engineVersion = "stencyl 3.5.0";
-    #elseif ((openfl >= "3.3.8") && (openfl < "4.0.0"))
-    engineVersion = "stencyl 3.4.0";
-    #elseif ((openfl >= "3.3.2") && (openfl < "3.3.8"))
-    engineVersion = "stencyl 3.3.2";
-    #else
-    engineVersion = "stencyl 3.2.0";
-    #end
+    // Get openfl Version
+    engineVersion = "openfl "+haxe.macro.Compiler.getDefine("openfl");
 
     #if(cpp && mobile && !android)
     configureEngineVersionGA(engineVersion);
