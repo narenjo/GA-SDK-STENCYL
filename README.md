@@ -40,12 +40,13 @@ If you have any issues or feedback regarding the SDK, please contact our friendl
 
 Changelog
 ---------
-** Fork modifications **
+<!--(CHANGELOG_TOP)-->
+**3.0.0**
+* Forked of GA Stencyl
 * Adpatation of SDK to Haxelib
 * Updated Android SDK
 * Added Javascript bindings
 
-<!--(CHANGELOG_TOP)-->
 **2.1.0**
 * included compatibility with x86_64 simulator (iOS)
 
