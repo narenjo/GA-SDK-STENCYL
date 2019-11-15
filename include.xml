@@ -9,9 +9,9 @@
 
 	<!--ANDROID-->
 	<section if="android">
-		<android extension="com.gameanalytics.MyGameAnalytics"/>
+		<android extension="org.haxe.extension.gameanalytics.MyGameAnalytics"/>
 		<classpath name="src" />
-		<dependency name="gameanalytics" path="dependencies/gameanalytics"/>
+		<dependency name="gameanalytics" path="dependencies/android/gameanalytics"/>
 	</section>
 
 </project>
