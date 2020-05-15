@@ -15,8 +15,8 @@ abstract GAErrorSeverity(Int) {
 abstract GAProgression(Int) {
   var Undefined = 0;
   var Started = 1;
-  var Fail = 2;
-  var Complete = 3;
+  var Complete = 2;
+  var Fail = 3;
 }
 
 @:enum
