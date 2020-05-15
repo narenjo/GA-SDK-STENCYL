@@ -208,7 +208,7 @@ class GameAnalytics {
     #if android
     if(initGA == null)
     {
-      initGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "initialise", "(Ljava/lang/String;Ljava/lang/String;)V", true);
+      initGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "initialise", "(Ljava/lang/String;Ljava/lang/String;)V", true);
     }
 
     initGA([gameKey, secretKey]);
@@ -236,7 +236,7 @@ class GameAnalytics {
     enableVerboseGA(enableVerboseB);
     #end
     #if android
-    enableVerboseGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics","enableVerboseLog", "(Ljava/lang/String;)V", true);
+    enableVerboseGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics","enableVerboseLog", "(Ljava/lang/String;)V", true);
     if(enableVerboseB)
     {
     enableVerboseGA(["true"]);
@@ -263,7 +263,7 @@ class GameAnalytics {
     enableInfoGA(enableInfoB);
     #end
     #if android
-    enableInfoGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "enableInfoLog", "(Ljava/lang/String;)V", true);
+    enableInfoGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "enableInfoLog", "(Ljava/lang/String;)V", true);
     if(enableInfoB)
     {
     enableInfoGA(["true"]);
@@ -290,7 +290,7 @@ class GameAnalytics {
     configureUserIdGA(user_id);
     #end
     #if android
-    configureUserIdGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configUserId", "(Ljava/lang/String;)V", true);
+    configureUserIdGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "configUserId", "(Ljava/lang/String;)V", true);
     configureUserIdGA([user_id]);
     #end
     #if(html5)
@@ -305,7 +305,7 @@ class GameAnalytics {
     configureBuildGA(build);
     #end
     #if android
-    configureBuildGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configureBuild", "(Ljava/lang/String;)V", true);
+    configureBuildGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "configureBuild", "(Ljava/lang/String;)V", true);
     configureBuildGA([build]);
     #end
     #if(html5)
@@ -325,7 +325,7 @@ class GameAnalytics {
     configureAvailableResourceCurrenciesGA(currencies);
     #end
     #if android
-    configureAvailableResourceCurrenciesGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configureAvailableResourceCurrencies", "(Ljava/lang/String;)V", true);
+    configureAvailableResourceCurrenciesGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "configureAvailableResourceCurrencies", "(Ljava/lang/String;)V", true);
     configureAvailableResourceCurrenciesGA([currencies]);
     #end
     #if(html5)
@@ -346,7 +346,7 @@ class GameAnalytics {
   configureAvailableResourceItemTypesGA(itemTypes);
   #end
   #if android
-  configureAvailableResourceItemTypesGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configureAvailableResourceItemTypes", "(Ljava/lang/String;)V", true);
+  configureAvailableResourceItemTypesGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "configureAvailableResourceItemTypes", "(Ljava/lang/String;)V", true);
   configureAvailableResourceItemTypesGA([itemTypes]);
   #end
   #if(html5)
@@ -367,7 +367,7 @@ class GameAnalytics {
   configureAvailableCustomDimensions01GA(customDimensions01);
   #end
   #if android
-  configureAvailableCustomDimensions01GA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configureAvailableCustomDimensions01", "(Ljava/lang/String;)V", true);
+  configureAvailableCustomDimensions01GA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "configureAvailableCustomDimensions01", "(Ljava/lang/String;)V", true);
   configureAvailableCustomDimensions01GA([customDimensions01]);
   #end
   #if(html5)
@@ -388,7 +388,7 @@ class GameAnalytics {
     configureAvailableCustomDimensions02GA(customDimensions02);
     #end
     #if android
-    configureAvailableCustomDimensions02GA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configureAvailableCustomDimensions02", "(Ljava/lang/String;)V", true);
+    configureAvailableCustomDimensions02GA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "configureAvailableCustomDimensions02", "(Ljava/lang/String;)V", true);
     configureAvailableCustomDimensions02GA([customDimensions02]);
     #end
     #if(html5)
@@ -409,7 +409,7 @@ class GameAnalytics {
     configureAvailableCustomDimensions03GA(customDimensions03);
     #end
     #if android
-    configureAvailableCustomDimensions03GA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configureAvailableCustomDimensions03", "(Ljava/lang/String;)V", true);
+    configureAvailableCustomDimensions03GA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "configureAvailableCustomDimensions03", "(Ljava/lang/String;)V", true);
     configureAvailableCustomDimensions03GA([customDimensions03]);
     #end
     #if(html5)
@@ -430,7 +430,7 @@ class GameAnalytics {
     setCustomDimension01GA(customDimension);
     #end
     #if android
-    setCustomDimension01GA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "setCustomDimension01", "(Ljava/lang/String;)V", true);
+    setCustomDimension01GA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "setCustomDimension01", "(Ljava/lang/String;)V", true);
     setCustomDimension01GA([customDimension]);
     #end
     #if(html5)
@@ -450,7 +450,7 @@ class GameAnalytics {
     setCustomDimension02GA(customDimension);
     #end
     #if android
-    setCustomDimension02GA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "setCustomDimension02", "(Ljava/lang/String;)V", true);
+    setCustomDimension02GA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "setCustomDimension02", "(Ljava/lang/String;)V", true);
     setCustomDimension02GA([customDimension]);
     #end
     #if(html5)
@@ -470,7 +470,7 @@ class GameAnalytics {
   setCustomDimension03GA(customDimension);
   #end
   #if android
-  setCustomDimension03GA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "setCustomDimension03", "(Ljava/lang/String;)V", true);
+  setCustomDimension03GA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "setCustomDimension03", "(Ljava/lang/String;)V", true);
   setCustomDimension03GA([customDimension]);
   #end
   #if(html5)
@@ -491,7 +491,7 @@ class GameAnalytics {
     setGenderGA(gstr);
   #end
   #if android
-    setGenderGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "setGender", "(I)V", true);
+    setGenderGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "setGender", "(I)V", true);
     var g:Int = cast gender;
     setGenderGA([g]);
   #end
@@ -513,7 +513,7 @@ class GameAnalytics {
     setBirthYearGA(birthYear);
     #end
     #if android
-    setBirthYearGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "setBirthYear", "(I)V", true);
+    setBirthYearGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "setBirthYear", "(I)V", true);
     setBirthYearGA([birthYear]);
     #end
     #if(html5)
@@ -536,7 +536,7 @@ class GameAnalytics {
     #if android
     if(addDesignEventGA == null)
     {
-    addDesignEventGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "addDesignEventWithEventId", "(Ljava/lang/String;)V", true);
+    addDesignEventGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "addDesignEventWithEventId", "(Ljava/lang/String;)V", true);
     }
     addDesignEventGA([designEventId]);
     #end
@@ -560,7 +560,7 @@ class GameAnalytics {
   #if android
   if(addDesignEventWithAmountGA == null)
   {
-  addDesignEventWithAmountGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "addDesignEventWithAmountGA", "(Ljava/lang/String;F)V", true);
+  addDesignEventWithAmountGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "addDesignEventWithAmountGA", "(Ljava/lang/String;F)V", true);
   }
   var args:Array<Dynamic> = [designEventId, amount];
   addDesignEventWithAmountGA(args);
@@ -601,7 +601,7 @@ class GameAnalytics {
   addBusinessEventGA();
   #end
   #if android
-  addBusinessEventGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "addBusinessEvent",
+  addBusinessEventGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "addBusinessEvent",
    "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
     true);
   var args:Array<Dynamic> = [currency, amountInCents, itemType, itemId, cartType, receipt, signature];
@@ -629,7 +629,7 @@ class GameAnalytics {
     addResourceEventGA(ft, currency, amount, itemType, itemId);
     #end
     #if android
-    addResourceEventGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "addResourceEvent", "(ILjava/lang/String;FLjava/lang/String;Ljava/lang/String;)V", true);
+    addResourceEventGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "addResourceEvent", "(ILjava/lang/String;FLjava/lang/String;Ljava/lang/String;)V", true);
     var args:Array<Dynamic> = [flowType, currency, amount, itemType, itemId];
     addResourceEventGA(args);
     #end
@@ -663,7 +663,7 @@ class GameAnalytics {
     addProgressionEventGA(status, progression01, progression02, progression03, score);
     #end
     #if android
-    addProgressionEventGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "addProgressionEvent", "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V", true);
+    addProgressionEventGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "addProgressionEvent", "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V", true);
     var args:Array<Dynamic> = [status, progression01, progression02, progression03, score];
     addProgressionEventGA(args);
     #end
@@ -688,7 +688,7 @@ class GameAnalytics {
     #end
     #if android
       var sev:Int = cast severity;
-      addErrorEventGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "addErrorEventWithSeverity", "(ILjava/lang/String;)V", true);
+      addErrorEventGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "addErrorEventWithSeverity", "(ILjava/lang/String;)V", true);
       var args:Array<Dynamic> = [sev, message];
       addErrorEventGA(args);
     #end
@@ -708,7 +708,7 @@ class GameAnalytics {
     #end
     #if android
       _version = sdk_version_android;
-      configureSdkVersionGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configureSdkGameEngineVersion", "(Ljava/lang/String;)V", true);
+      configureSdkVersionGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "configureSdkGameEngineVersion", "(Ljava/lang/String;)V", true);
       configureSdkVersionGA([_version]);
     #end
     #if(html5)
@@ -728,7 +728,7 @@ class GameAnalytics {
     configureEngineVersionGA(engineVersion);
     #end
     #if android
-    configureEngineVersionGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "configureGameEngineVersion", "(Ljava/lang/String;)V", true);
+    configureEngineVersionGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "configureGameEngineVersion", "(Ljava/lang/String;)V", true);
     configureEngineVersionGA([engineVersion]);
     #end
     #if(html5)
@@ -743,7 +743,7 @@ class GameAnalytics {
       setEnabledManualSessionHandlingGA();
     #end
     #if android
-      setEnabledManualSessionHandlingGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "enableManualSessionHandling", "()V", true);
+      setEnabledManualSessionHandlingGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "enableManualSessionHandling", "()V", true);
       setEnabledManualSessionHandlingGA();
     #end
     #if(html5)
@@ -757,7 +757,7 @@ class GameAnalytics {
       startSessionGA();
     #end
     #if android
-    startSessionGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "enableManualSessionHandling", "()V", true);
+    startSessionGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "enableManualSessionHandling", "()V", true);
       startSessionGA();
     #end
     #if(html5)
@@ -771,7 +771,7 @@ class GameAnalytics {
       endSessionGA();
     #end
     #if android
-      endSessionGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "startSession", "()V", true);
+      endSessionGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "startSession", "()V", true);
       endSessionGA();
     #end
     #if(html5)
@@ -788,8 +788,8 @@ class GameAnalytics {
     #if android
       if(isCommandCenterReadyGA == null)
       {
-      isCommandCenterReadyGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "isCommandCenterReady", "()V");
-      getIsCommandCenterReadyGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics", "getIsCommandCenterReady", "()Z");
+      isCommandCenterReadyGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "isCommandCenterReady", "()V");
+      getIsCommandCenterReadyGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics", "getIsCommandCenterReady", "()Z");
       }
       isCommandCenterReadyGA();
       Sys.sleep(.05); // threads are parallel and we need to wait for UI thread in Android to finish the check
@@ -817,11 +817,11 @@ class GameAnalytics {
     #if android
       if(getCommandCenterValueAsStringGA == null)
       {
-      getCommandCenterValueAsStringGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics","getCommandCenterValueAsString","(Ljava/lang/String;)V");
+      getCommandCenterValueAsStringGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics","getCommandCenterValueAsString","(Ljava/lang/String;)V");
       }
       if(getFetchedConfigValueGA == null)
       {
-      getFetchedConfigValueGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics","getFetchedConfigValue","()Ljava/lang/String;");
+      getFetchedConfigValueGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics","getFetchedConfigValue","()Ljava/lang/String;");
       }
       getCommandCenterValueAsStringGA(GameAnalytics.configKey);
       Sys.sleep(.05); // threads are parallel and we need to wait for UI thread in Android to finish loading the config value
@@ -851,11 +851,11 @@ class GameAnalytics {
     #if android
     if(getCommandCenterValueAsStringWithDefValGA == null)
     {
-    getCommandCenterValueAsStringWithDefValGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics","getCommandCenterValueAsStringWithDefVal","(Ljava/lang/String;Ljava/lang/String;)V");
+    getCommandCenterValueAsStringWithDefValGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics","getCommandCenterValueAsStringWithDefVal","(Ljava/lang/String;Ljava/lang/String;)V");
     }
     if(getFetchedConfigValueGA == null)
     {
-    getFetchedConfigValueGA = JNI.createStaticMethod("com/gameanalytics/MyGameAnalytics","getFetchedConfigValue","()Ljava/lang/String;");
+    getFetchedConfigValueGA = JNI.createStaticMethod("org/haxe/extension/gameanalytics/MyGameAnalytics","getFetchedConfigValue","()Ljava/lang/String;");
     }
     getCommandCenterValueAsStringWithDefValGA(GameAnalytics.configKey, GameAnalytics.configDefaultValue);
     Sys.sleep(.05); // threads are parallel and we need to wait for UI thread in Android to finish loading the config value

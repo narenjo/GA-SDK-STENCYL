@@ -1,1 +1,4 @@
 **/.DS_Store
+dependencies/android/gameanalytics/.project
+dependencies/android/gameanalytics/.gradle
+dependencies/android/gameanalytics/.settings
