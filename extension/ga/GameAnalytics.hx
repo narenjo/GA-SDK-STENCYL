@@ -608,7 +608,7 @@ class GameAnalytics {
   addBusinessEventGA(args);
   #end
     #if(html5)
-      GameAnalyticsJS.GameAnalytics("addBusinessEvent", amountInCents, currency, amount, itemType, itemId, cartType);
+      GameAnalyticsJS.GameAnalytics("addBusinessEvent", currency, amountInCents, itemType, itemId, cartType);
     #end
   }
 
