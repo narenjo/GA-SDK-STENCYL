@@ -219,8 +219,8 @@ class GameAnalytics {
   {
     #if(html5)
         GameAnalyticsJS.GameAnalytics("initialize",
-            "1f50637264c54a0bd15a11ba2beaf9d9",
-            "fedfbf1bf8bfac55d4d86d1ede81f84c91901a5f");
+        GameAnalytics.gameKey,
+        GameAnalytics.secretKey);
     #end    
   } 
 
