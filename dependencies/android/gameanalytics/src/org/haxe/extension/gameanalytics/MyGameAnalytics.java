@@ -257,33 +257,17 @@ public class MyGameAnalytics extends Extension
     );
   }
 
-  public static void setGender(final int gender)
-  {
-    mainActivity.runOnUiThread
-    (
-      new Runnable()
-      {
-        public void run()
-        {
-          GameAnalytics.setGender(gender);
-        }
-      }
-    );
-  }
+  /**
+   * @deprecated in 5.1.1
+   */
+  @Deprecated
+  public static void setGender(final int gender) {}
 
-  public static void setBirthYear(final int year)
-  {
-    mainActivity.runOnUiThread
-    (
-      new Runnable()
-      {
-        public void run()
-        {
-          GameAnalytics.setBirthYear(year);
-        }
-      }
-    );
-  }
+  /**
+   * @deprecated in 5.1.1
+   */
+  @Deprecated
+  public static void setBirthYear(final int year) {}
 
   //Events
   public static void addDesignEventWithEventId(final String eventId)
@@ -480,53 +464,33 @@ public class MyGameAnalytics extends Extension
   }
 
   //Command center
-  static public void isCommandCenterReady()
-  {
-    mainActivity.runOnUiThread
-    (
-      new Runnable()
-      {
-        public void run()
-        {
-          isCCready = GameAnalytics.isCommandCenterReady();
-        }
-      }
-    );
-  }
+  /**
+   * @deprecated
+   */
+  @Deprecated
+  static public void isCommandCenterReady() {}
 
+  /**
+   * @deprecated
+   */
+  @Deprecated
   static public boolean getIsCommandCenterReady()
   {
-    return isCCready;
+    return false;
   }
 
 
-  static public void getCommandCenterValueAsString(final String key)
-  {
-    mainActivity.runOnUiThread
-    (
-      new Runnable()
-      {
-        public void run()
-        {
-          configValue = GameAnalytics.getCommandCenterValueAsString(key);
-        }
-      }
-    );
-  }
+  /**
+   * @deprecated
+   */
+  @Deprecated
+  static public void getCommandCenterValueAsString(final String key) {}
 
-  static public void getCommandCenterValueAsStringWithDefVal(final String key, final String defValue)
-  {
-    mainActivity.runOnUiThread
-    (
-      new Runnable()
-      {
-        public void run()
-        {
-          configValue = GameAnalytics.getCommandCenterValueAsString(key, defValue);
-        }
-      }
-    );
-  }
+  /**
+   * @deprecated
+   */
+  @Deprecated
+  static public void getCommandCenterValueAsStringWithDefVal(final String key, final String defValue) {}
 
   static public String getFetchedConfigValue()
   {
