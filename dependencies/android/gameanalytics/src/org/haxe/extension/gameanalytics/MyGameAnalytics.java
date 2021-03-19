@@ -59,7 +59,7 @@ public class MyGameAnalytics extends Extension
 			{
 				public void run()
 				{
-          GameAnalytics.initializeWithGameKey(mainActivity, gameKey, secretKey);
+          GameAnalytics.initialize(mainActivity, gameKey, secretKey);
 				}
 			}
 		);
@@ -294,7 +294,7 @@ public class MyGameAnalytics extends Extension
       {
         public void run()
         {
-          GameAnalytics.addDesignEventWithEventId(eventId);
+          GameAnalytics.addDesignEvent(eventId);
         }
       }
     );
@@ -309,7 +309,7 @@ public class MyGameAnalytics extends Extension
       {
         public void run()
         {
-          GameAnalytics.addDesignEventWithEventId(eventId, dvar);
+          GameAnalytics.addDesignEvent(eventId, dvar);
         }
       }
     );
@@ -323,7 +323,7 @@ public class MyGameAnalytics extends Extension
       {
         public void run()
         {
-          GameAnalytics.addBusinessEventWithCurrency(currency, amount, itemType, itemId, cartType, receipt, "google_play", signature);
+          GameAnalytics.addBusinessEvent(currency, amount, itemType, itemId, cartType, receipt, "google_play", signature);
         }
       }
     );
@@ -338,7 +338,7 @@ public class MyGameAnalytics extends Extension
       {
         public void run()
         {
-          GameAnalytics.addResourceEventWithFlowType(type, currency, amount, itemType, itemId);
+          GameAnalytics.addResourceEvent(type, currency, amount, itemType, itemId);
         }
       }
     );
@@ -358,33 +358,33 @@ public class MyGameAnalytics extends Extension
           {
             if(score !=0)
             {
-              GameAnalytics.addProgressionEventWithProgressionStatus(status, progression01, dvar);
+              GameAnalytics.addProgressionEvent(status, progression01, dvar);
             }
             else
             {
-              GameAnalytics.addProgressionEventWithProgressionStatus(status, progression01);
+              GameAnalytics.addProgressionEvent(status, progression01);
             }
           }
           if(!progression02.equals("empty") && progression03.equals("empty"))
           {
             if(score !=0)
             {
-              GameAnalytics.addProgressionEventWithProgressionStatus(status, progression01, progression02, dvar);
+              GameAnalytics.addProgressionEvent(status, progression01, progression02, dvar);
             }
             else
             {
-              GameAnalytics.addProgressionEventWithProgressionStatus(status, progression01, progression02);
+              GameAnalytics.addProgressionEvent(status, progression01, progression02);
             }
           }
           if(!progression02.equals("empty") && !progression03.equals("empty"))
           {
             if(score !=0)
             {
-              GameAnalytics.addProgressionEventWithProgressionStatus(status, progression01, progression02, progression03, dvar);
+              GameAnalytics.addProgressionEvent(status, progression01, progression02, progression03, dvar);
             }
             else
             {
-              GameAnalytics.addProgressionEventWithProgressionStatus(status, progression01, progression02, progression03);
+              GameAnalytics.addProgressionEvent(status, progression01, progression02, progression03);
             }
           }
         }
@@ -401,7 +401,7 @@ public class MyGameAnalytics extends Extension
       {
         public void run()
         {
-          GameAnalytics.addErrorEventWithSeverity(severity, message);
+          GameAnalytics.addErrorEvent(severity, message);
         }
       }
     );
